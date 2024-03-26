@@ -1,0 +1,2 @@
+The users of this application has role to check the artist performance as
+in terms of business or curiosity.

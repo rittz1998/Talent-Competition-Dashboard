@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--Head section-->
+<head>
+
+<!--Http protocal to avoid cross origin restrictions-->
+    <httpProtocol>
+        <customHeaders>
+            <add name="Access-Control-Allow-Origin" value="*" />
+            <add name="Access-Control-Allow-Headers" value="Content-Type" />
+            <add name="Access-Control-Allow-Methods" value="GET, POST, PUT, DELETE, OPTIONS" />
+        </customHeaders>
+    </httpProtocol>
+
+<!--Add script src file for javascript and jquery-->
+    <script src="js/d3.v4.min.js" charset="utf-8"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+<!--Font size and style link-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+<!--Include css file -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--Title for page-->
+    <title>Artist Performance Check</title>
+</head>
+
+<!--Body of the html page-->
+<body>
+<!--div block mainWrapper-->
+    <div id="mainWrapper">
+
+<!--Div block graph-->
+        <div id="graph">
+            <!-- Line Graph -->
+            <!--Line chart for episodes-->
+            <div id="plot">
+                <div class="note" id="note0"></div>
+                <div class="note" id="note1"></div>
+                <div class="note" id="note2"></div>
+                <div class="note" id="note3"></div>
+                <div class="note" id="note4"></div>
+                <div class="note" id="note5"></div>
+                <div class="note" id="note6"></div>
+                <div class="note" id="note7"></div>
+            </div>
+
+            <!-- Profile -->
+            <!--Profile information of the particular candidate-->
+            <div id="profile">
+                <div id="picWrapper">
+                    <img src="#" id="pic">
+                </div>
+                <div id="textWrapper">
+<!--Name of the contestant-->
+                    <span id="infoName"></span>
+<!--Class label of the contestant-->
+                    <span id="infoLetter" class="letter"></span>
+<!--Company information of the contestant-->
+                    <div id="infoCompany" class="smallCaps"></div>
+<!--Rank of the contestant-->
+                    <div id="infoRank"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Top 11 contestants-->
+        <div id="chart">
+<!--Ranking of top 11 contestants-->
+            <h1>Top 100 contestants ranking</h1>
+<!--Table information-->
+            <table id="top">
+                <thead>
+                    <tr class="smallCaps">
+                        <th onclick="toggleSort('latestRank')" id="latestRank" class="selectedSort" data-asc="true">Rank</th>
+                        <th onclick="toggleSort('name')" id="name" data-asc="false">Name</th>
+                        <th onclick="toggleSort('company')" id="company" data-asc="false">Company</th>
+                        <th onclick="toggleSort('letter')" id="letter" data-asc="false">Class</th>
+                        <th onclick="toggleSort('rankChange')" id="rankChange" data-asc="false">Change</th>
+                    </tr>
+                </thead>
+                <tbody id="topBody">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+<!--include main.js file-->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

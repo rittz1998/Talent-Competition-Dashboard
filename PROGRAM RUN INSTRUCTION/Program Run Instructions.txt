@@ -1,0 +1,8 @@
+Instructions to run the code:
+(python must installed in the local machine from where the application folder is running)
+
+1) Open up the file location in the command terminal
+
+2) Type the command: "python -m http.server 8080"
+
+3) On the web browser, connect application on https://localhost:8080

@@ -1,0 +1,4 @@
+For Data Wrangling process:
+
+1) Web scrapped data from the website: https://kpopping.com/survivalshow to Csv file
+
